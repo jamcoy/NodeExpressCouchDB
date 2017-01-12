@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .row.page-header: .col-lg-12
+        h3= pageHeader.title
+    .row
+        .col-xs-12.col-md-9
+            .row
+                .col-xs-12.col-sm-6
+                    p Author:&nbsp;
+                        span= item.Author
+                    p ISBN:&nbsp;
+                        span= item.ISBN
+                    p Type:&nbsp;
+                        span= item.Type
+                    p ID:&nbsp;
+                        span= item._id
+                    p Rev:&nbsp;
+                        span= item._rev
+                    p Last update:&nbsp;
+                        span= item.Updated
+                    br
+                    a.btn.btn-primary(href="/update-item/#{item._id}")
+                        Update Update item
+                    &nbsp;&nbsp;&nbsp;
+                    a.btn.btn-danger(href="/delete-item/#{item._id}")
+                        Delete Delete item
+                    br
+                    p N.B. Currently gets the revision immediately before updating or deleting.
+                    br

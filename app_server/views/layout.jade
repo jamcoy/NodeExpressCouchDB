@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/bootstrap/css/cyborg.bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        .navbar.navbar-default.navbar-fixed-top.navbar-inverse
+            .container
+                .navbar-header
+                    a.navbar-brand(href='/') Nodejs with CouchDB
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                #navbar-main.navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='/about/') About
+
+        .container
+            block content
+
+        .row
+            footer.col-xs-12
+                .container
+                    table
+                        tr
+                            td
+                                a(href='/') About |
+                                a(href='/') Terms |
+                                a(href='/') Contact
+                            td
+                                img(src='/images/FB-f-Logo__blue_29.png')
+                                img(src='/images/Instagram-logo_29.png')
+                                img(src='/images/Twitter_logo_blue_32.png')
+
+        script(src='/javascripts/jquery-3.1.1.min.js')
+        script(src='/bootstrap/js/bootstrap.min.js')
